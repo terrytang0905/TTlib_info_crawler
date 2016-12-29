@@ -10,15 +10,9 @@ from scrapy.item import Item, Field
 
 class BabaSRItem(Item):
     # define the fields for your item here like:
+    invest_link = Field()
     title = Field()
-    link = Field()
-    source = Field()
-    name = Field()
-    picture = Field()
-    #summary = Field()
-    content = Field()
-    price = Field()
-    paylink = Field()
-    setting = Field()
-    tag = Field()
-    # desc = Field()
+    time = Field()
+    fund_round = Field()
+    fund = Field()
+    invest_firm = Field()

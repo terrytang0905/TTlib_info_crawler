@@ -13,21 +13,23 @@ BOT_NAME = 'babaSR'
 SPIDER_MODULES = ['babaSR.spiders']
 NEWSPIDER_MODULE = 'babaSR.spiders'
 
-ITEM_PIPELINES = ['babaSR.mysqlpipelines.MySQLPipeline']
+
+ITEM_PIPELINES = ['babaSR.csvpipelines.CsvPipeline']
 #ITEM_PIPELINES = ['babaSR.filepipelines.FilePipeline']
-DB_SERVER="192.168.1.103"
-DB_PORT=3306
-DB_USERNAME="sgs"
-DB_PASSWORD="sgs2015"
-DB_NAME="sgs"
+# ITEM_PIPELINES = ['babaSR.mysqlpipelines.MySQLPipeline']
+# DB_SERVER="127.0.0.1"
+# DB_PORT=3306
+# DB_USERNAME="tt"
+# DB_PASSWORD="tt2015"
+# DB_NAME="investment"
 
 # ITEM_PIPELINES = ['babaSR.mongopipelines.MongoDBPipeline']
-# MONGODB_SERVER = "192.168.0.103"
-# MONGODB_PORT = 15000
-# MONGODB_USERNAME = "root"
-# MONGODB_PASSWORD = "lenote2013"
-# MONGODB_DB = "babasr"
-# MONGODB_COLLECTION = "article"
+# MONGODB_SERVER = "127.0.0.1"
+# MONGODB_PORT = 10001
+# MONGODB_USERNAME = "invest"
+# MONGODB_PASSWORD = "mac2015"
+# MONGODB_DB = "investment"
+# MONGODB_COLLECTION = "startup"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

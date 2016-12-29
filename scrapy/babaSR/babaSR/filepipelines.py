@@ -7,6 +7,10 @@
 
 import json
 import codecs
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class FilePipeline(object):
 
@@ -14,9 +18,8 @@ class FilePipeline(object):
         self.file = codecs.open('dataCapture.json', 'w', encoding='utf-8')
 
     def process_item(self, item, spider):
-    	print 'process_item:',item
+        print 'process_item:',item
         line = json.dumps(dict(item), ensure_ascii=False) + "\n"
-        #print 'process_item:',line
         self.file.write(line)
         return item
 
